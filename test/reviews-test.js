@@ -118,6 +118,9 @@ describe('Reviews Component', () => {
     let restaurantId = store.getState().restaurants[0].id
     store.dispatch({ type: 'ADD_REVIEW', review: { text: "Was great", restaurantId } })
     store.dispatch({ type: 'ADD_REVIEW', review: { text: "Was not great", restaurantId } })
+  
+    console.log("==================")
+    console.log(store.getState())
     const wrapper = mount(<Provider store={store}><App /></Provider>);
 
 
